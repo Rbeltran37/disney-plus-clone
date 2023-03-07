@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disney+ clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <img src="images/logo.png" class="brand-logo" alt="logo">
+        <ul class="nav-links">
+            <li class="nav-items" onmouseover="homeLine()" onmouseleave="homeLineNone()">
+                <i class="fa-solid fa-house nav-icon"></i>
+                <a href="#">HOME</a>
+                <div id="home-underline"></div>
+            </li>
+            <li class="nav-items" onmouseover="searchLine()" onmouseleave="searchLineNone()">
+                <i class="fa-solid fa-magnifying-glass nav-icon"></i>
+                <a href="#">SEARCH</a>
+                <div id="search-underline"></div>
+            </li>
+            <li class="nav-items" onmouseover="watchlistLine()" onmouseleave="watchlistLineNone()">
+                <i class="fa-solid fa-plus nav-icon"></i>
+                <a href="#">WATCHLIST</a>
+                <div id="watchlist-underline"></div>
+            </li>
+            <li class="nav-items" onmouseover="originalsLine()" onmouseleave="originalsLineNone()">
+                <i class="fa-solid fa-star nav-icon"></i>
+                <a href="#">ORIGINALS</a>
+                <div id="originals-underline"></div>
+            </li>
+            <li class="nav-items" onmouseover="moviesLine()" onmouseleave="moviesLineNone()">
+                <i class="fa-solid fa-film nav-icon"></i>
+                <a href="#">MOVIES</a>
+                <div id="movies-underline"></div>
+            </li>
+            <li class="nav-items" onmouseover="seriesLine()" onmouseleave="seriesLineNone()">
+                <i class="fa-solid fa-tv nav-icon"></i>
+                <a href="#">SERIES</a>
+                <div id="series-underline"></div>
+            </li>
+        </ul>
+
+        <div class="right-container">
+            <input type="text" class="search-box" placeholder="search">
+            <button class="sub-btn">Subscribe</button>
+            <a href="#" class="login-link">Login</a>
+        </div>
+    </nav>
+
+    <div class="slide-container">
+        <div class="circle-container">
+            <div class="dark-circle"></div>
+            <div class="dark-circle"></div>
+            <div class="dark-circle"></div>
+            <div class="dark-circle"></div>
+            <div class="dark-circle"></div>
+            <div class="dark-circle"></div>
+            <div class="dark-circle"></div>
+        </div>
+        <div id="slide0">
+            <img class="SliderImg" src="images/slide0.jpg" alt="">
+            <img id="slidetitle0" src="images/slideTitle0.png" alt="">
+        </div>
+        <div id="slide1">
+            <img class="SliderImg" src="images/slide1.jpg" alt="">
+            <img id="slidetitle1" src="images/slideTitle1.png" alt="">
+        </div>
+        <div id="slide2">
+            <img class="SliderImg" src="images/slide2.jpg" alt="">
+            <img id="slidetitle2" src="images/slideTitle2.png" alt="">
+            <img id="slider-prev" src="images/pre.png" alt="" onclick="prevSlide()">
+        </div>
+        <div id="slide3">
+            <img class="SliderImg" src="images/slide3.jpg" alt="">
+            <img id="slidetitle3" src="images/slideTitle3.png" alt="">
+        </div>
+        <div id="slide4">
+            <img class="SliderImg" src="images/slide4.jpg" alt="">
+            <img id="slidetitle4" src="images/slideTitle4.png" alt="">
+            <img id="slider-next" src="images/nxt.png" alt="" onclick="nextSlide()">
+        </div>
+        <div id="slide5">
+            <img class="SliderImg" src="images/slide5.jpg" alt="">
+            <img id="slidetitle5" src="images/slideTitle5.png" alt="">
+        </div>
+        <div id="slide6">
+            <img class="SliderImg" src="images/slide6.jpg" alt="">
+            <img id="slidetitle6" src="images/slideTitle6.png" alt="">
+        </div>
+    </div>
+
+    <div class="video-card-container">
+        <div class="video-card">
+            <img src="images/disney.PNG" class="video-card-image" alt="">
+            <video src="videos/disney.mp4" mute loop class="card-video"></video>
+        </div>
+        <div class="video-card">
+            <img src="images/pixar.PNG" class="video-card-image" alt="">
+            <video src="videos/pixar.mp4" mute loop class="card-video"></video>
+        </div>
+        <div class="video-card">
+            <img src="images/marvel.PNG" class="video-card-image" alt="">
+            <video src="videos/marvel.mp4" mute loop class="card-video"></video>
+        </div>
+        <div class="video-card">
+            <img src="images/star-wars.PNG" class="video-card-image" alt="">
+            <video src="videos/star-war.mp4" mute loop class="card-video"></video>
+        </div>
+        <div class="video-card">
+            <img src="images/geographic.PNG" class="video-card-image" alt="">
+            <video src="videos/geographic.mp4" mute loop class="card-video"></video>
+        </div>
+    </div>
+
+    <h1 class="title">recommended for you</h1>
+    <div class="movies-list">
+        <div class="card-container">
+            <div class="card">
+                <img src="images/moana.jpg" class="card-img" alt="">
+            </div>
+            <div class="card">
+                <img src="images/encanto.jpg" class="card-img" alt="">
+            </div>
+            <div class="card">
+                <img src="images/zootopia.jpg" class="card-img" alt="">
+            </div>
+            <div class="card">
+                <img src="images/frozen2.jpg" class="card-img" alt="">
+            </div>
+            <div class="card">
+                <div class="card-prev" onclick="prev()">
+                    <img src="images/pre.png" alt="">
+                </div>
+                <img src="images/strangeWorld.jpg" class="card-img" alt="">
+            </div>
+            <div class="card">
+                <div class="card-next" onclick="next()">
+                    <img src="images/nxt.png" alt="">
+                </div>
+                <img src="images/frozen.jpg" class="card-img" alt="">
+            </div>
+            <div class="card">
+                <img src="images/luca.jpg" class="card-img" alt="">
+            </div>
+            <div class="card">
+                <img src="images/turningRed.jpg" class="card-img" alt="">
+            </div>
+            <div class="card">
+                <img src="images/cars.jpg" class="card-img" alt="">
+            </div>
+            <div class="card">
+                <div class="card-prev" onclick="prev2()">
+                    <img src="images/pre.png" alt="">
+                </div>
+                <img src="images/toyStory.jpg" class="card-img" alt="">
+            </div>
+            <div class="card">
+                <div class="card-next" onclick="next2()">
+                    <img src="images/nxt.png" alt="">
+                </div>
+                <img src="images/findingNemo.jpg" class="card-img" alt="">
+            </div>
+            <div class="card">
+                <img src="images/tangled.jpg" class="card-img" alt="">
+            </div>
+            <div class="card">
+                <img src="images/coco.jpg" class="card-img" alt="">
+            </div>
+            <div class="card">
+                <img src="images/monster.jpg" class="card-img" alt="">
+            </div>
+            <div class="card">
+                <img src="images/wreck.jpg" class="card-img" alt="">
+            </div>
+        </div>
+    </div>
+
+    <h1 class="title">new to disney+</h1>
+    <div class="movies-list">
+        <div class="card-container">
+            <div class="card2">
+                <img src="images/mando.jpg" class="card-img" alt="">
+            </div>
+            <div class="card2">
+                <img src="images/bluey.jpg" class="card-img" alt="">
+            </div>
+            <div class="card2">
+                <img src="images/clubhouse.jpg" class="card-img" alt="">
+            </div>
+            <div class="card2">
+                <img src="images/simpson.jpg" class="card-img" alt="">
+            </div>
+            <div class="card2">
+                <div class="card-prev2" onclick="prev3()">
+                    <img src="images/pre.png" alt="">
+                </div>
+                <img src="images/blackpanther.jpg" class="card-img" alt="">
+            </div>
+            <div class="card2">
+                <div class="card-next2" onclick="next3()">
+                    <img src="images/nxt.png" alt="">
+                </div>
+                <img src="images/badbatch.jpg" class="card-img" alt="">
+            </div>
+            <div class="card2">
+                <img src="images/spidey.jpg" class="card-img" alt="">
+            </div>
+            <div class="card2">
+                <img src="images/jessie.jpg" class="card-img" alt="">
+            </div>
+            <div class="card2">
+                <img src="images/bigcity.jpg" class="card-img" alt="">
+            </div>
+            <div class="card2">
+                <div class="card-prev2" onclick="prev4()">
+                    <img src="images/pre.png" alt="">
+                </div>
+                <img src="images/phineas.jpg" class="card-img" alt="">
+            </div>
+            <div class="card2">
+                <div class="card-next2" onclick="next4()">
+                    <img src="images/nxt.png" alt="">
+                </div>
+                <img src="images/andor.jpg" class="card-img" alt="">
+            </div>
+            <div class="card2">
+                <img src="images/chip.jpg" class="card-img" alt="">
+            </div>
+            <div class="card2">
+                <img src="images/freeguy.jpg" class="card-img" alt="">
+            </div>
+            <div class="card2">
+                <img src="images/thequest.jpg" class="card-img" alt="">
+            </div>
+            <div class="card2">
+                <img src="images/soul.jpg" class="card-img" alt="">
+            </div>
+        </div>
+    </div>
+
+    <h1 class="title">trending</h1>
+    <div class="movies-list">
+        <div class="card-container">
+            <div class="card3">
+                <img src="images/incredibles2.jpg" class="card-img" alt="">
+            </div>
+            <div class="card3">
+                <img src="images/raya.jpg" class="card-img" alt="">
+            </div>
+            <div class="card3">
+                <img src="images/onward.jpg" class="card-img" alt="">
+            </div>
+            <div class="card3">
+                <img src="images/santa.jpg" class="card-img" alt="">
+            </div>
+            <div class="card3">
+                <div class="card-prev3" onclick="prev5()">
+                    <img src="images/pre.png" alt="">
+                </div>
+                <img src="images/newgroove.jpg" class="card-img" alt="">
+            </div>
+            <div class="card3">
+                <div class="card-next3" onclick="next5()">
+                    <img src="images/nxt.png" alt="">
+                </div>
+                <img src="images/moongirl.jpg" class="card-img" alt="">
+            </div>
+            <div class="card3">
+                <img src="images/owlhouse.jpg" class="card-img" alt="">
+            </div>
+            <div class="card3">
+                <img src="images/up.jpg" class="card-img" alt="">
+            </div>
+            <div class="card3">
+                <img src="images/hocuspocus.jpg" class="card-img" alt="">
+            </div>
+            <div class="card3">
+                <div class="card-prev3" onclick="prev6()">
+                    <img src="images/pre.png" alt="">
+                </div>
+                <img src="images/xmen.jpg" class="card-img" alt="">
+            </div>
+            <div class="card3">
+                <div class="card-next3" onclick="next6()">
+                    <img src="images/nxt.png" alt="">
+                </div>
+                <img src="images/ducktales.jpg" class="card-img" alt="">
+            </div>
+            <div class="card3">
+                <img src="images/clonewars.jpg" class="card-img" alt="">
+            </div>
+            <div class="card3">
+                <img src="images/gravityfalls.jpg" class="card-img" alt="">
+            </div>
+            <div class="card3">
+                <img src="images/rebels.jpg" class="card-img" alt="">
+            </div>
+            <div class="card3">
+                <img src="images/spiderman.jpg" class="card-img" alt="">
+            </div>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+    <script src="https://kit.fontawesome.com/84ed4a4736.js" crossorigin="anonymous"></script>
+</body>
+</html>
